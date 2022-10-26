@@ -26,6 +26,12 @@ body {
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.6;
+  padding: 0 2rem;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -60,27 +66,16 @@ h6 {
   margin-bottom: 2.5rem;
 }
 
-/* Utilities
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.container {
-  position: relative;
-  margin: 0 auto;
-  max-width: 114rem;
-  padding: 2.4rem;
-  width: 100%;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Cards
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   max-width: 92rem;
+  display: flex;
+}
+
+.cards > * {
+  flex: 1;
 }
 
 .card {
@@ -110,7 +105,6 @@ h6 {
   font-size: 1.5rem;
   line-height: 2.5rem;
   margin-bottom: 8.3rem;
-  /* width: 80%; */
 }
 
 .card:first-child {
@@ -170,8 +164,9 @@ h6 {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 800px) {
   .cards {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     max-width: 60rem;
+    padding: 8.8rem 0;
     width: 100%;
   }
 
